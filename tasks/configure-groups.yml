@@ -37,7 +37,7 @@
 - name: reaffirm permission on files
   become: yes
   file:
-    path: ~/.kube
+    path: /home/{{ user }}/.kube
     state: directory
     owner: '{{ user }}'
     group: '{{ user }}'
