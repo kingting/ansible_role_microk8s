@@ -9,11 +9,10 @@
     loop_var: user
     label: '{{ user }}'
 
-- name: Create .kube folder for the user
+- name: Create /home/{{ user }}/.kube folder for the user
   become: yes
-  become_user: '{{ user }}'
   file:
-    path: ~/.kube
+    path: /home/{{ user }}/.kube
     state: directory
     owner: '{{ user }}'
     group: '{{ user }}'
