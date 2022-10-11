@@ -21,6 +21,7 @@
     name: microk8s
     classic: yes
     channel: "{{ microk8s_version }}"
+    state: present
 
 - name: Wait for microk8s to be ready
   become: yes
